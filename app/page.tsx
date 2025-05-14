@@ -53,7 +53,7 @@ export default function Page() {
         className="mt-6 z-10"
       >
         <div className="bg-white bg-opacity-70 backdrop-blur-md rounded-xl p-4 text-center text-gray-800 mt-6">
-          <p>“May your curiosity and courage continue to take you to magical places.”</p>
+          <p>"May your curiosity and courage continue to take you to magical places."</p>
           <p className="mt-2">From Cindy</p>
         </div>
       </motion.div>
