@@ -14,11 +14,12 @@ export default function Page() {
       </div>
 
       {/* Background music */}
-      <audio autoPlay loop className="hidden">
+      <audio autoPlay loop className="hidden" id="bg-music">
         <source src="/happy_music.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 
+      {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,6 +29,7 @@ export default function Page() {
         🎓 Congratulations, Dr. Tom! 🎉
       </motion.h1>
 
+      {/* Description */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -37,6 +39,7 @@ export default function Page() {
         You've officially earned your PhD — a journey full of dedication, brilliance, and resilience. The world just got a little smarter with Dr. Tom in it!
       </motion.p>
 
+      {/* Image */}
       <motion.img
         src="/congrats_tom_ghibli.png"
         alt="Ghibli-style Tom"
@@ -46,6 +49,7 @@ export default function Page() {
         transition={{ delay: 1.5, duration: 1 }}
       />
 
+      {/* Message card */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -56,6 +60,21 @@ export default function Page() {
           <p>&quot;May your curiosity and courage continue to take you to magical places.&quot;</p>
           <p className="mt-2">From Cindy</p>
         </div>
+      </motion.div>
+
+      {/* Optional: play button for manual trigger */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.5, duration: 1 }}
+        className="z-10 mt-4"
+      >
+        <button
+          onClick={() => document.getElementById('bg-music')?.play()}
+          className="px-4 py-2 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700"
+        >
+          🔊 Play Celebration Music
+        </button>
       </motion.div>
     </div>
   );
